@@ -15,6 +15,9 @@ for libro in libros:
             continue
         # Reemplazar símbolos para dejar solo palabras y dejar en minúsculas
         corpus = linea.lower()
+        # Filtrar guiones
+        corpus = re.sub('-', ' ', corpus)
+        # Permitir solo alfabeto y espacios en blanco
         allow = string.ascii_lowercase + ' ' + '\t' + '\n'
         corpus = re.sub('[^%s]' % allow, '', corpus)
         output.write(corpus)
