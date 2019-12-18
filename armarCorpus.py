@@ -13,7 +13,7 @@ for libro in libros:
         # Saltarse lineas en blanco
         if not linea.strip():
             continue
-        # Reemplazar símbolos para dejar solo palabras
+        # Reemplazar símbolos para dejar solo palabras y dejar en minúsculas
         corpus = linea.lower()
         allow = string.ascii_lowercase + ' ' + '\t' + '\n'
         corpus = re.sub('[^%s]' % allow, '', corpus)
