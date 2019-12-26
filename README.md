@@ -31,6 +31,11 @@ A su vez también se utilizó un listado de libros en español del mismo sitio p
 - Hamlet: Drama en cinco actos por William Shakespeare - hamlet.txt
 - La Ilíada por Homero - iliada.txt
 - La Odisea por Homero - odisea.txt
+- Cuentos de Amor de Locura y de Muerte por Horacio Quiroga - cuentos.txt
+- Cuentos Clásicos del Norte, Primera Serie por Edgar Allan Poe - clasicos.txt
+- Don Juan Tenorio por José Zorrilla - juan_tenorio.txt
+- Doña Perfecta por Benito Pérez Galdós - perfecta.txt
+- La Quimera por condesa de Emilia Pardo Bazán - quimera.txt
 Generando el archivo: './corpus-es.txt'.
 
 En el trabajo de la parte 1,d), también se utilizó el siguiente [listado de stopwords](http://xpo6.com/list-of-english-stop-words/), en el archivo `stop-word-list.csv` para el filtrado de las posibles soluciones, el cual debe estar en la carpeta raíz del notebook para su correcta ejecución.
