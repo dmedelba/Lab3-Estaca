@@ -5,7 +5,8 @@ libros = ['frankenstein.txt', 'moby_dick.txt', 'modest_proposal.txt',
           'jekyll_hyde.txt', 'two_cities.txt', 'pride_prejudice.txt', 
           'beowulf.txt', 'dracula.txt', 'metamorphosis.txt', 'ulysses.txt']
 
-libros_es = ['divina_comedia.txt', 'don_quijote.txt', 'hamlet.txt', 'iliada.txt', 'odisea.txt']
+libros_es = ['divina_comedia.txt', 'don_quijote.txt', 'hamlet.txt', 'iliada.txt', 'odisea.txt',
+            'juan_tenorio.txt', 'quimera.txt', 'perfecta.txt', 'clasicos.txt', 'cuentos.txt']
 
 def armarCorpus(libros, modo=0):
     # Armado corpus, modo 0 = inglés
@@ -15,6 +16,7 @@ def armarCorpus(libros, modo=0):
         output = open('./corpus.txt', 'w')
     else:
         output = open('./corpus-es.txt', 'w')
+    skip=1
     for libro in libros:
         archivo = ''
         if modo == 0:
@@ -41,9 +43,17 @@ def armarCorpus(libros, modo=0):
             # Permitir solo alfabeto y espacios en blanco
             allow = string.ascii_lowercase + ' ' + '\t' + '\n'
             corpus = re.sub('[^%s]' % allow, '', corpus)
+            # Filtrar partes gutenberg
+            if skip:
+                if re.match(".*(start).*(project gutenberg).*", corpus) != None:
+                    skip = 0
+                continue
+            elif re.match(".*(end).*(project gutenberg).*", corpus) != None:
+                skip = 1
+                continue
             output.write(corpus)
         archivo.close()
     output.close()
 
 armarCorpus(libros)
-armarCorpus(libros_es, 1)
+armarCorpus(libros_es, modo=1)
