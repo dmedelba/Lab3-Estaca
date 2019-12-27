@@ -11,8 +11,14 @@ Se puede ejecutar con `jupyter lab .` desde consola, estando dentro de la carpet
     pip install random
 ```
 
+También para el trabajo de NLP se usó la librería `nltk`, la cual se debe instalar junto a dependencias:
+```
+    pip install --user -U nltk
+    python -m nltk.downloader popular
+```
+
 ## Indicaciones generales:
-Los libros utilizados para el corpus en formato .txt fueron obtenidos del [proyecto gutenberg](https://www.gutenberg.org/browse/scores/top), en donde se trabajó con los siguientes libros para las partes 1 y 2, los cuales para la ejecución deben estar en la carpet `./libro`:
+Los libros utilizados para el corpus en formato .txt fueron obtenidos del [proyecto gutenberg](https://www.gutenberg.org/browse/scores/top), en donde se trabajó con los siguientes libros para las partes 1 y 2, los cuales para la ejecución deben estar en la carpeta `./libro` y `./libro-es`, respectivamente:
 - Frankenstein; Or, The Modern Prometheus by Mary Wollstonecraft Shelley - frankenstein.txt
 - Moby Dick; Or, The Whale by Herman Melville - moby_dick.txt
 - A Modest Proposal by Jonathan Swift - modest_proposal.txt
@@ -38,4 +44,15 @@ A su vez también se utilizó un listado de libros en español del mismo sitio p
 - La Quimera por condesa de Emilia Pardo Bazán - quimera.txt
 Generando el archivo: './corpus-es.txt'.
 
+También para el bonus (B.1) se formuló un corpus con un solo libro filtrado:
+- A Tale of Two Cities by Charles Dickens - two_cities.txt
+Generando el archivo: './corpus-libro.txt'.
+
+Para la formulación de dichos corpus se utilizó un script apartado del informe en `armarCorpus.py`, el cual necesita los .txt en sus carpetas correspondientes y se debe ejecutar con:
+```
+python armarCorpus.py
+```
+
 En el trabajo de la parte 1,d), también se utilizó el siguiente [listado de stopwords](http://xpo6.com/list-of-english-stop-words/), en el archivo `stop-word-list.csv` para el filtrado de las posibles soluciones, el cual debe estar en la carpeta raíz del notebook para su correcta ejecución.
+
+Para el bonus B.1, se usó el siguiente [listado de tags](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html), usado por la librería `nltk`.
