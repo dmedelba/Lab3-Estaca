@@ -9,7 +9,9 @@ Se puede ejecutar con `jupyter lab .` desde consola, estando dentro de la carpet
     pip install pandas
     pip install numpy
     pip install random
+    pip install -U scikit-learn
 ```
+
 
 También para el trabajo de NLP se usó la librería `nltk`, la cual se debe instalar junto a dependencias:
 ```
