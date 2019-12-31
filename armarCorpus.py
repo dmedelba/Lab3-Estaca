@@ -81,10 +81,6 @@ def armarCorpusB(libros, modo=0):
             corpus = linea.lower()
             # Filtrar guiones
             corpus = re.sub('-', ' ', corpus)
-            '''
-            # Permitir solo alfabeto y espacios en blanco
-            allow = string.ascii_lowercase + ' ' + '\t' + '\n'
-            corpus = re.sub('[^%s]' % allow, '', corpus)'''
             # Filtrar partes gutenberg
             if skip:
                 if re.match(".*(start).*(project gutenberg).*", corpus) != None:
