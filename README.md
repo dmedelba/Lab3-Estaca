@@ -12,12 +12,15 @@ Se puede ejecutar con `jupyter lab .` desde consola, estando dentro de la carpet
     pip install -U scikit-learn
 ```
 
-
 También para el trabajo de NLP se usó la librería `nltk`, la cual se debe instalar junto a dependencias:
 ```
     pip install --user -U nltk
     python -m nltk.downloader popular
 ```
+
+## Repositorio github
+Laboratorio con todos los archivos necesarios para la correcta ejecución:
+https://github.com/dmedelba/Lab3-Estaca
 
 ## Indicaciones generales:
 Los libros utilizados para el corpus en formato .txt fueron obtenidos del [proyecto gutenberg](https://www.gutenberg.org/browse/scores/top), en donde se trabajó con los siguientes libros para las partes 1 y 2, los cuales para la ejecución deben estar en la carpeta `./libro` y `./libro-es`, respectivamente:
